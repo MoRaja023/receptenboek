@@ -1,7 +1,7 @@
 <?php
 // Database configuratie
-$host  = "localhost";
-$dbuser = "mariadb";
+$host  = "mariadb";
+$dbuser = "user";
 $dbpass = "password";
 $dbname = "receptenboek";
 

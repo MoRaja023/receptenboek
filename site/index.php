@@ -26,23 +26,23 @@ require "database.php";
 	
 	<main>
 		<section class="recipe">
-			<h2>Chicken Alfredo</h2>
-			<img src="chicken-alfredo.jpg" alt="Chicken Alfredo">
+			<h2>Caribbean Jerk Chicken met Ananas Salsa</h2>
+			<img src="images/chicken_jerk.jpg" alt="Chicken Jerk">
 			<ul>
-				<li>1 pound fettuccine</li>
-				<li>1/2 cup unsalted butter</li>
-				<li>1 pint heavy cream</li>
-				<li>1 teaspoon garlic powder</li>
-				<li>1/2 teaspoon salt</li>
-				<li>1/4 teaspoon black pepper</li>
-				<li>1 cup grated Parmesan cheese</li>
-				<li>2 cups cooked chicken breast, cubed</li>
+				<li>⅓ kopje olijfolie</li>
+				<li>sap van 2 limoenen - 2-3 eetlepels</li>
+				<li>2 theelepels gehakte knoflook</li>
+				<li>2 eetlepels sojasaus</li>
+				<li>1 theelepel uienpoeder</li>
+				<li>½ theelepel nootmuskaat</li>
+				<li>3 theelepels piment</li>
+				<li>½ theelepel gemalen rode pepervlokken</li>
+				<li>1 eetlepel honing</li>
 			</ul>
-			<p>1. Cook fettuccine according to package instructions.</p>
-			<p>2. In a saucepan, melt butter over medium heat. Add heavy cream, garlic powder, salt, and pepper. Bring to a simmer and cook for 5 minutes, stirring constantly.</p>
-			<p>3. Remove from heat and stir in Parmesan cheese until melted and smooth.</p>
-			<p>4. Add cooked chicken to sauce and stir to combine.</p>
-			<p>5. Serve Alfredo sauce over cooked fettuccine.</p>
+			<p>1. Roer in een middelgrote kom alle marinade-ingrediënten door elkaar. Voeg de kip toe, gooi om te coaten. Dek af en laat 30 minuten afkoelen.</p>
+			<p>2. Terwijl de kip aan het marineren is, combineer je alle salsa-ingrediënten in een kom en meng om te combineren. Optioneel: combineer in een blender of keukenmachine en geef het een paar pulsen. Koel tot klaar voor gebruik.</p>
+			<p>3. Gebruik een tang om de kip over te brengen naar een voorverwarmde grill of koekenpan op middelhoog vuur (gooi de marinade weg) en bak 6-8 minuten aan elke kant tot ze gaar zijn.</p>
+			<p>4. Serveer de kip met ananassalsa</p>
 		</section>
 	</main>
 	

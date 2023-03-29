@@ -1,4 +1,5 @@
 <?php
+
 // Database configuratie
 $host  = "mariadb";
 $dbuser = "user";

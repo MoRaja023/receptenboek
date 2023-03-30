@@ -1,3 +1,14 @@
+<?php
+// Dit is het startpunt van je applicatie.
+require "database.php";
+
+//de sql query
+$sql = "SELECT * FROM  Caribische_Recepten";
+
+//hier wordt de query uitgevoerd met de database
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html>
 

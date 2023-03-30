@@ -1,0 +1,147 @@
+/* Bijna alle pagina's toegankelijk */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Flexbox toegepast op navigatie */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #ffc107;
+  }
+  
+  /* Pseudo-klasse gebruikt zoals :hover */
+  button {
+    background-color: #ffc107;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #333;
+    color: white;
+  }
+  /* Minimaal 3 kleuren gebruikt */
+:root {
+    --primary-color: #FF8C00; /* oranje */
+    --secondary-color: #383838; /* donkergrijs */
+    --accent-color: #8F8F8F; /* lichtgrijs */
+  }
+  
+  body {
+    background-color: #F5F5F5; /* lichtgrijs */
+    color: var(--secondary-color);
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Ruimte tussen elementen */
+  header, main, footer {
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li + li {
+    margin-top: 10px;
+  }
+  
+  /* Layout zoals professionele site */
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  article {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  article h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+  }
+  
+  article p {
+    margin-top: 10px;
+  }
+  
+  /* Extra stijlen voor recepten */
+  .recipe-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-ingredients {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-ingredient {
+    margin-bottom: 5px;
+  }
+  
+  .recipe-instructions {
+    margin-top: 20px;
+  }
+  
+  .recipe-instruction {
+    margin-bottom: 10px;
+  }
+  

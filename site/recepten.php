@@ -27,41 +27,34 @@ $recepetenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Recepten</title>
 </head>
 
 <body>
 
-	<header>
-		<h1>Caribische Recepten</h1>
-	</header>
+	<?php include 'header.php' ?>
 
-	<nav>
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Recepten</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-	</nav>
+	<?php include "nav.php" ?>
 
 	<main>
-
-		<?php foreach ($recepetenboek as $recept) : ?>
-			<a href="recept.php">
-				<div class="recept-image">
-					<img id="receptimg" src="<?php echo $recept['foto'] ?>" alt="">
-				</div>
-				<div class="recept-naam">
-					<?php echo $recept["titel"] ?>
-				</div>
-				<div class="caption">
-					<i class="fa-refular fa-clock"></i>
-				</div>
-			</a>
-		<?php endforeach; ?>
-
+		<div class="container">
+			<div class="recept">
+				<?php foreach ($recepetenboek as $recept) : ?>
+					<a href="recept.php">
+						<div class="recept-image">
+							<img id="receptimg" src="<?php echo $recept['foto'] ?>" alt="">
+						</div>
+						<div class="receptnaam">
+							<h2><?php echo $recept["titel"] ?></h2>
+						</div>
+					</a>
+				<?php endforeach; ?>
+			</div>
+		</div>
 	</main>
+
+	<?php include 'footer.php' ?>
 
 </body>
 

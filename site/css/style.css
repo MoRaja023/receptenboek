@@ -25,16 +25,21 @@ ul{
 	justify-content: space-around;
 }
 
-main{
+div.container{
+	width: 960px;
+	margin: 0 auto;
+}
+
+div.recept{
 	display: flex;
-	justify-content: space-around;
-	padding: 100px 200px;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
 #receptimg{
-	height: 80px;
-	width: 80px;
-	margin: 30px;
+	height: 300px;
+	width: 300px;
+	
 }
 
 nav li {

@@ -23,32 +23,16 @@ $recepetenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <html>
 
 <head>
-	<title>index.php</title>
+	<title>index</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style2.css">
 </head>
 
 <body>
-	<header>
-		<h1>Caribische Recepten</h1>
-	</header>
-
-	<nav>
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Recepten</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-	</nav>
-
-	<main>
-
-	</main>
-
-	<footer>
-		<p>&copy; 2023 Mohamed - 155784</p>
-	</footer>
+	<?php include 'header.php' ?>
+	<?php include "nav.php" ?>
+	<?php include 'footer.php' ?>
 </body>
 
 </html>

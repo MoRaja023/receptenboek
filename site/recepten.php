@@ -18,10 +18,7 @@ $result = mysqli_query($conn, $sql);
  * Maar dit kies je zelf
  */
 $recepetenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,17 +48,16 @@ $recepetenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	<main>
 
 		<?php foreach ($recepetenboek as $recept) : ?>
-			<a href="#">
+			<a href="recept.php">
 				<div class="recept-image">
-					<img id="images/" src="<?php echo $recept['foto'] ?>" alt="">
+					<img id="receptimg" src="<?php echo $recept['foto'] ?>" alt="">
 				</div>
 				<div class="recept-naam">
-					<?php echo $recept["titel"]?>
+					<?php echo $recept["titel"] ?>
 				</div>
 				<div class="caption">
 					<i class="fa-refular fa-clock"></i>
 				</div>
-				<button>Ga verder</button>
 			</a>
 		<?php endforeach; ?>
 

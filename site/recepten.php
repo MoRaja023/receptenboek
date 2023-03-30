@@ -31,7 +31,7 @@ $recepetenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<title>restore_exception_handler</title>
+	<title>Recepten</title>
 </head>
 
 <body>
@@ -50,11 +50,18 @@ $recepetenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 	<main>
 
-		<?php foreach ($recepetenboek as $recepet) : ?>
+		<?php foreach ($recepetenboek as $recept) : ?>
 			<a href="#">
-				<div class="recept">
-					<img id="receptimg" src="<?php echo $recept['foto'] ?>" alt="">
+				<div class="recept-image">
+					<img id="images/" src="<?php echo $recept['foto'] ?>" alt="">
 				</div>
+				<div class="recept-naam">
+					<?php echo $recept["titel"]?>
+				</div>
+				<div class="caption">
+					<i class="fa-refular fa-clock"></i>
+				</div>
+				<button>Ga verder</button>
 			</a>
 		<?php endforeach; ?>
 

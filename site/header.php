@@ -8,7 +8,7 @@ $sql = "SELECT COUNT(titel) as aantal_recepten FROM  Caribische_Recepten";
 //hier wordt de query uitgevoerd met de database
 $result = mysqli_query($conn, $sql);
 
-$receptenboek = mysqli_fetch_assoc($result);
+$aantal = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -26,9 +26,8 @@ $receptenboek = mysqli_fetch_assoc($result);
     <header>
         <div class="container">
             <h1>Caribische Recepten</h1>
-            <p> <?php echo $recepetenboek['aantal_recepten'] ?> </p>
+            <p> <?php echo $aantal['aantal_recepten'] ?> </p>
         </div>
-
     </header>
 </body>
 

@@ -1,6 +1,4 @@
 <?php
-
-
 // Dit is het startpunt van je applicatie.
 require "database.php";
 
@@ -35,10 +33,10 @@ $receptenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	<?php include 'header.php' ?>
 	<?php include "nav.php" ?>
 	<main>
-		<div class="container">
+	<div class="container">
 			<div class="recept">
-				<?php foreach ($recepetenboek as $recept) : ?>
-					<a href="recept.php">
+				<?php foreach ($receptenboek as $recept) : ?>
+					<a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
 						<div class="recept-image">
 							<img id="receptimg" src="<?php echo $recept['foto'] ?>" alt="">
 						</div>
@@ -52,5 +50,6 @@ $receptenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	</main>
 	<?php include 'footer.php' ?>
 </body>
+
 
 </html>

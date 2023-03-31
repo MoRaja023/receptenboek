@@ -14,6 +14,11 @@ header {
 	font-size: 32px;
 }
 
+header p{
+	text-align: left;
+	padding-top: 20px;
+}
+
 nav {
 	height: 70px;
 	display: flex;
@@ -37,8 +42,6 @@ nav ul li a:hover {
     color: #005361;
     transition: 1s;  
 }
-
-
 
 nav img{
 	min-width: 200px;

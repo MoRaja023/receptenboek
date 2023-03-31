@@ -9,6 +9,7 @@ $sql = "SELECT * FROM  Caribische_Recepten";
 $result = mysqli_query($conn, $sql);
 ?>
 
+
 <!DOCTYPE html>
 <html>
 

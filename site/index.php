@@ -23,10 +23,10 @@ $recepetenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <html>
 
 <head>
-	<title>index</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style2.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>index</title>
 </head>
 
 <body>

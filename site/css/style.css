@@ -1,7 +1,8 @@
-body {
+*{
 	font-family: Arial, sans-serif;
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 }
 
 header {
@@ -14,15 +15,34 @@ header {
 }
 
 nav {
-	background-color: #333;
+	height: 70px;
+	display: flex;
+	background-color: rgb(148, 193, 66);
 	color: #fff;
+}
+
+nav ul{
+	padding-left: 420px;
+	padding-top: 18px;
+}
+
+nav ul li{
+	list-style: none;
+	display: inline-block;
 	padding: 10px;
 }
 
-ul{
-	list-style: none;
-	display: flex;
-	justify-content: space-around;
+nav ul li a:hover {
+    border: 1px solid #005361;
+    color: #005361;
+    transition: 1s;  
+}
+
+
+
+nav img{
+	min-width: 200px;
+	padding-left: 80px;
 }
 
 div.container{
@@ -36,10 +56,14 @@ div.recept{
 	gap: 10px;
 }
 
+div.recept a{
+	text-decoration: none;
+	color: rgb(148, 193, 66);;
+}
+
 #receptimg{
 	height: 300px;
 	width: 300px;
-	
 }
 
 nav li {
@@ -64,22 +88,25 @@ main {
 
 .recipe h2 {
 	margin-top: 0;
+	flex-wrap: wrap;
 }
 
 .recipe img {
 	display: block;
 	margin: 0 auto;
-	max-width: 100%;
+	width: 600px;
 }
 
 .recipe ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	flex-wrap: wrap;
 }
 
 .recipe li {
 	margin-bottom: 10px;
+	flex-wrap: wrap;
 }
 
 footer {

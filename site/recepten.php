@@ -32,11 +32,8 @@ $recepetenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 </head>
 
 <body>
-
 	<?php include 'header.php' ?>
-
 	<?php include "nav.php" ?>
-
 	<main>
 		<div class="container">
 			<div class="recept">
@@ -53,9 +50,7 @@ $recepetenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 			</div>
 		</div>
 	</main>
-
 	<?php include 'footer.php' ?>
-
 </body>
 
 </html>

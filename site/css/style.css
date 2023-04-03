@@ -83,9 +83,17 @@ main {
 	margin: 20px;
 }
 
+div.flexbox{
+	padding: top;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* */
 .recipe {
 	border: 1px solid #ccc;
-	margin-bottom: 20px;
+	
 	padding: 20px;
 }
 
@@ -100,16 +108,9 @@ main {
 	width: 600px;
 }
 
-.recipe ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	flex-wrap: wrap;
-}
-
-.recipe li {
-	margin-bottom: 10px;
-	flex-wrap: wrap;
+div.blok-tekst2{
+	display: inline-flex;
+    gap: 10px;
 }
 
 footer {

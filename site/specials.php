@@ -1,27 +1,83 @@
 <?php
-// Verbinding maken met de database
-$conn = mysqli_connect('mariadb', 'user', 'password', 'receptenboek');
+require "database.php";
 
-// Query om alle recepten op te halen
-$query = "SELECT Caribische_Recepten, FROM foto";
+//de sql query 1
+$sql = "SELECT *, MAX(duur) as duur FROM  Caribische_Recepten";
 
-// Resultaat van de query ophalen
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($conn, $sql);
 
-// Controleren of er resultaten zijn
-if(mysqli_num_rows($result) > 0) {
-  // Loop door alle resultaten heen en toon de gegevens
-  while($row = mysqli_fetch_assoc($result)) {
-    echo "<div>";
-    echo "<h2>" . $row['titel'] . "</h2>";
-    echo "<img src='" . $row['afbeelding'] . "' alt='" . $row['titel'] . "' />";
-    echo "</div>";
-  }
-} else {
-  // Geen resultaten gevonden
-  echo "Geen recepten gevonden.";
-}
+$tijdsduur = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-// Databaseverbinding sluiten
-mysqli_close($conn);
+//de sql query 2
+$sql = "SELECT * FROM  Caribische_Recepten WHERE Moeilijkheidsgraad = 'Makkelijk'";
+
+$result = mysqli_query($conn, $sql);
+
+$makkelijkst = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+//de sql query 3
+$sql = "SELECT *, MAX(LENGTH(aantal_ingredienten)) FROM  Caribische_Recepten";
+
+$result = mysqli_query($conn, $sql);
+
+$ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>specials</title>
+</head>
+
+<body>
+  <?php include 'header.php' ?>
+  <?php include "nav.php" ?>
+  <main>
+    <div class="container">
+      <div class="recept">
+        <?php foreach ($tijdsduur as $duur) : ?>
+          <a href="recept.php?id=<?php echo $duur['recepten_id'] ?>">
+            <div class="recept-image">
+              <img id="receptimg" src="<?php echo $duur['foto'] ?>" alt="">
+            </div>
+            <div class="receptnaam">
+              <h2><?php echo $duur["titel"] ?></h2>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      </div>
+      <div class="recept">
+        <?php foreach ($makkelijkst as $makkelijker) : ?>
+          <a href="recept.php?id=<?php echo $makkelijker['recepten_id'] ?>">
+            <div class="recept-image">
+              <img id="receptimg" src="<?php echo $makkelijker['foto'] ?>" alt="">
+            </div>
+            <div class="receptnaam">
+              <h2><?php echo $makkelijker["titel"] ?></h2>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      </div>
+      <div class="recept">
+        <?php foreach ($ingredienten as $aantalingredienten) : ?>
+          <a href="recept.php?id=<?php echo $aantalingredienten['recepten_id'] ?>">
+            <div class="recept-image">
+              <img id="receptimg" src="<?php echo $aantalingredienten['foto'] ?>" alt="">
+            </div>
+            <div class="receptnaam">
+              <h2><?php echo $aantalingredienten["titel"] ?></h2>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </main>
+  <?php include 'footer.php' ?>
+</body>
+
+</html>

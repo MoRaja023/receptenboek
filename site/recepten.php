@@ -34,7 +34,7 @@ $receptenboek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	<?php include "nav.php" ?>
 	<main>
 	<div class="container">
-			<div class="recept">
+			<div class="special_recepten">
 				<?php foreach ($receptenboek as $recept) : ?>
 					<a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
 						<div class="recept-image">

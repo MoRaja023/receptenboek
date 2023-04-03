@@ -40,7 +40,7 @@ $recept = mysqli_fetch_assoc($result);
                 <div class="blok-tekst">
                     <article>
                         <p><?php echo $recept['duur'] ?></p>
-                        <p><?php echo $recept['aantal ingredienten'] ?></p>
+                        <p><?php echo $recept['aantal_ingredienten'] ?></p>
                 </div>
                 <div class="blok-tekst2">
                     <p><?php echo $recept['menugang'] ?></p>

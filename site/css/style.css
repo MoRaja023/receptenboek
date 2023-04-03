@@ -69,6 +69,32 @@ div.recept a{
 	width: 300px;
 }
 
+div.special_recepten{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 20px;
+	gap: 20px;
+	flex-direction: column;
+}
+
+div.special_recepten a{
+	text-decoration: none;
+	color: rgb(148, 193, 66);
+}
+
+div.special_recepten h2{
+	padding-bottom: 20px;
+}
+#special_receptenimg{
+	height: 300px;
+	width: 300px;
+}
+
+div.vis{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
 nav li {
 	margin: 0,5em;
 	padding: 0,5em;
@@ -118,4 +144,4 @@ footer {
 	color: #fff;
 	padding: 10px;
 	text-align: center;
-} 
+}

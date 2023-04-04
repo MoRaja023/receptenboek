@@ -53,6 +53,17 @@ div.container{
 	margin: 0 auto;
 }
 
+div.achtergrond{
+	display: flex;
+	width: 1400px;
+	height: 800px;
+}
+
+div.achtergrond img{
+	object-fit: cover;
+	object-position: center;
+}
+
 div.recept{
 	display: flex;
 	flex-wrap: wrap;
@@ -90,9 +101,9 @@ div.special_recepten h2{
 	width: 300px;
 }
 
-div.vis{
-	padding-bottom: 20px;
-	padding-top: 20px;
+div.titel_plaatje{
+	text-align: center;
+	padding-left: 40px;
 }
 
 nav li {
@@ -115,8 +126,6 @@ div.flexbox{
 	flex-direction: column;
 }
 
-
-/* */
 .recipe {
 	border: 1px solid #ccc;
 	

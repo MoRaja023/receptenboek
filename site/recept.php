@@ -36,20 +36,25 @@ $recept = mysqli_fetch_assoc($result);
                 <h2><?php echo $recept['titel'] ?></h2>
                 <img src="<?php echo $recept['foto'] ?>">
             </div>
+            <br>
             <div class="flexbox">
                 <div class="blok-tekst">
-                    <article>
-                        <p><?php echo $recept['duur'] ?></p>
-                        <p><?php echo $recept['aantal_ingredienten'] ?></p>
+                    <h2>Tijdsduur</h2>
+                    <p><?php echo $recept['duur'] ?> Min</p>
+                    <br>
+                    <h2>Ingrediënten</h2>
+                    <p><?php echo $recept['aantal_ingredienten'] ?></p>
                 </div>
+                <br>
                 <div class="blok-tekst2">
-                    <p><?php echo $recept['menugang'] ?></p>
-                    <p><?php echo $recept['moeilijkheidsgraad'] ?></p>
+                    <p>Menugang: <?php echo $recept['menugang'] ?></p>
+                    <p>Moeilijkheid: <?php echo $recept['moeilijkheidsgraad'] ?></p>
                 </div>
+                <br>
                 <div class="blok-tekst3">
+                    <h2>Instructie</h2>
                     <p><?php echo $recept['beschrijving'] ?></p>
                 </div>
-                </article>
             </div>
         </div>
     </main>

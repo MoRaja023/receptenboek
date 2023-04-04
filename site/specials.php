@@ -40,39 +40,44 @@ $ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <?php include "nav.php" ?>
   <main>
     <div class="container">
-      <?php foreach ($tijdsduur as $duur) : ?>
-        <a href="recept.php?id=<?php echo $duur['recepten_id'] ?>">
-          <div class="recept-image">
-            <img id="receptimg" src="<?php echo $duur['foto'] ?>" alt="">
-          </div>
-          <div class="receptnaam">
-            <h2><?php echo $duur["titel"] ?></h2>
-          </div>
-        </a>
-      <?php endforeach; ?>
-    </div>
-    <?php foreach ($makkelijkst as $makkelijker) : ?>
-      <a href="recept.php?id=<?php echo $makkelijker['recepten_id'] ?>">
-        <div class="recept-image">
-          <img id="receptimg" src="<?php echo $makkelijker['foto'] ?>" alt="">
-        </div>
-        <div class="receptnaam">
-          <h2><?php echo $makkelijker["titel"] ?></h2>
-        </div>
-      </a>
-    <?php endforeach; ?>
-    </div>
-    <?php foreach ($ingredienten as $aantalingredienten) : ?>
-      <a href="recept.php?id=<?php echo $aantalingredienten['recepten_id'] ?>">
-        <div class="recept-image">
-          <img id="receptimg" src="<?php echo $aantalingredienten['foto'] ?>" alt="">
-        </div>
-        <div class="receptnaam">
-          <h2><?php echo $aantalingredienten["titel"] ?></h2>
-        </div>
-      </a>
-    <?php endforeach; ?>
-    </div>
+      <div class="special_recepten">
+        <?php foreach ($tijdsduur as $duur) : ?>
+          <a href="recept.php?id=<?php echo $duur['recepten_id'] ?>">
+            <div class="recept-image">
+              <img id="receptimg" src="<?php echo $duur['foto'] ?>" alt="">
+            </div>
+            <div class="receptnaam">
+              <h2><?php echo $duur["titel"] ?></h2>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      </div>
+      <div class="special_recepten">
+      <h1></h1>
+        <?php foreach ($makkelijkst as $makkelijker) : ?>
+          <a href="recept.php?id=<?php echo $makkelijker['recepten_id'] ?>">
+            <div class="recept-image">
+              <img id="receptimg" src="<?php echo $makkelijker['foto'] ?>" alt="">
+            </div>
+            <div class="receptnaam">
+              <h2><?php echo $makkelijker["titel"] ?></h2>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      </div>
+      <div class="special_recepten">
+        <h1></h1>
+        <?php foreach ($ingredienten as $aantalingredienten) : ?>
+          <a href="recept.php?id=<?php echo $aantalingredienten['recepten_id'] ?>">
+            <div class="recept-image">
+              <img id="receptimg" src="<?php echo $aantalingredienten['foto'] ?>" alt="">
+            </div>
+            <div class="receptnaam">
+              <h2><?php echo $aantalingredienten["titel"] ?></h2>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      </div>
     </div>
   </main>
   <?php include 'footer.php' ?>

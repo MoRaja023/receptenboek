@@ -13,9 +13,9 @@
     <nav>
         <img src="images/logo.png" alt="logo">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Recepten</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="recepten.php">Recepten</a></li>
+            <li><a href="specials.php">Specials</a></li>
         </ul>
     </nav>
 </body>

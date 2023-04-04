@@ -154,3 +154,27 @@ footer {
 	padding: 10px;
 	text-align: center;
 }
+
+/* index.html */
+
+.content {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	padding: 50px 20px;
+	color: black;
+	font-family: Arial, sans-serif;
+}
+  
+.content h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: black;
+	text-emphasis-color: black;
+}
+
+.content  p {
+	font-size: 20px;
+	line-height: 1.5;
+	color: black;
+}

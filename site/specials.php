@@ -41,6 +41,7 @@ $ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <main>
     <div class="container">
       <div class="special_recepten">
+        <h2>Langst duurt</h2>
         <?php foreach ($tijdsduur as $duur) : ?>
           <a href="recept.php?id=<?php echo $duur['recepten_id'] ?>">
             <div class="recept-image">
@@ -53,7 +54,8 @@ $ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <?php endforeach; ?>
       </div>
       <div class="special_recepten">
-      <h1></h1>
+      <h2>Makkelijkst</h2>
+      <p>Dit gerecht is het Makkelijkst om te maken</p>
         <?php foreach ($makkelijkst as $makkelijker) : ?>
           <a href="recept.php?id=<?php echo $makkelijker['recepten_id'] ?>">
             <div class="recept-image">
@@ -66,7 +68,8 @@ $ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <?php endforeach; ?>
       </div>
       <div class="special_recepten">
-        <h1></h1>
+        <h2>Meeste ingrediënten</h2>
+        <p>dit gerecht heeft de meeste ingrediënten</p>
         <?php foreach ($ingredienten as $aantalingredienten) : ?>
           <a href="recept.php?id=<?php echo $aantalingredienten['recepten_id'] ?>">
             <div class="recept-image">

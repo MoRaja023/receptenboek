@@ -11,9 +11,6 @@ $sql = "SELECT * FROM Caribische_Recepten WHERE recepten_id = $id";
 $result  = mysqli_query($conn, $sql);
 
 $recept = mysqli_fetch_assoc($result);
-
-
-
 ?>
 
 <!DOCTYPE html>

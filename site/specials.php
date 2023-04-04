@@ -42,6 +42,7 @@ $ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <div class="container">
       <div class="special_recepten">
         <h2>Langst duurt</h2>
+        <p>Dit gerecht duurt het langst van allemaal</p>
         <?php foreach ($tijdsduur as $duur) : ?>
           <a href="recept.php?id=<?php echo $duur['recepten_id'] ?>">
             <div class="recept-image">

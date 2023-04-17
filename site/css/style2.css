@@ -1,147 +1,86 @@
-/* Bijna alle pagina's toegankelijk */
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-  }
-  
-  /* Flexbox toegepast op navigatie */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  nav a:hover {
-    color: #ffc107;
-  }
-  
-  /* Pseudo-klasse gebruikt zoals :hover */
-  button {
-    background-color: #ffc107;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #333;
-    color: white;
-  }
-  /* Minimaal 3 kleuren gebruikt */
-:root {
-    --primary-color: #FF8C00; /* oranje */
-    --secondary-color: #383838; /* donkergrijs */
-    --accent-color: #8F8F8F; /* lichtgrijs */
-  }
-  
-  body {
-    background-color: #F5F5F5; /* lichtgrijs */
-    color: var(--secondary-color);
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-  }
-  
-  /* Ruimte tussen elementen */
-  header, main, footer {
-    padding: 20px;
-  }
-  
-  h1, h2, h3 {
-    margin-top: 0;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li + li {
-    margin-top: 10px;
-  }
-  
-  /* Layout zoals professionele site */
-  header {
-    background-color: var(--primary-color);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header h1 {
-    font-size: 36px;
-    margin: 0;
-  }
-  
-  header nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-  }
-  
-  main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-  
-  article {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  
-  article h2 {
-    color: var(--primary-color);
-    font-size: 24px;
-  }
-  
-  article p {
-    margin-top: 10px;
-  }
-  
-  /* Extra stijlen voor recepten */
-  .recipe-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .recipe-ingredients {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .recipe-ingredient {
-    margin-bottom: 5px;
-  }
-  
-  .recipe-instructions {
-    margin-top: 20px;
-  }
-  
-  .recipe-instruction {
-    margin-bottom: 10px;
-  }
-  
+/* Algemene stijl */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-image: url('achtergrond.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 0 #f2b705, 4px 4px 0 #f25c05;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #f2b705;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  background-color: #f2b705;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #f25c05;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+}
+footer {
+	background-color: #2d3e50; /* diepblauwe kleur voor een Caribisch thema */
+	color: #fff;
+	padding: 20px; /* verhoog de opvulling voor meer ruimte */
+	text-align: center;
+	position: fixed; /* bevestig de footer aan de onderkant van de pagina */
+	left: 0;
+	bottom: 0;
+	width: 100%; /* maak de footer breedte 100% van de pagina */
+	box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75); /* voeg een subtiele schaduw toe voor visueel belang */
+}
